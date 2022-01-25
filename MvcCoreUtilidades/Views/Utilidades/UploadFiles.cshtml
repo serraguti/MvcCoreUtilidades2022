@@ -1,0 +1,13 @@
+﻿<h1>Upload Files Core</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="fichero" class="form-control"/>
+    <button type="submit" class="btn btn-outline-dark">
+        Upload File
+    </button>
+</form>
+<h2 style="color:blue">
+    @ViewBag.Mensaje
+</h2>
+
+<a href="~/uploads/@ViewBag.FileName">Mostrar imagen</a>
