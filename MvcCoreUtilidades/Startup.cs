@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MvcCoreUtilidades.Helpers;
 using MvcCoreUtilidades.Providers;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,8 @@ namespace MvcCoreUtilidades
         {
             services.AddSingleton<IConfiguration>(this.Configuration);
             services.AddSingleton<PathProvider>();
+            services.AddSingleton<HelperMail>();
+            services.AddSingleton<HelperUploadFiles>();
             services.AddControllersWithViews();
         }
 
